@@ -1,5 +1,5 @@
 {
-  "name": "@afzaalis/rpic-website",
+  "name": "@afzaalis/frontend-rpic",
   "version": "1.0.0",
   "description": "Website RPIC menggunakan React dan Vite",
   "keywords": ["react", "vite", "rpic", "frontend"],
