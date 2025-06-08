@@ -3,7 +3,7 @@ const express = require('express');
 const authRoutes = require('../routes/auth');
 const bodyParser = require('body-parser');
 
-
+// Jest mock
 jest.mock('../model/user', () => ({
   getUserByEmail: jest.fn(),
   addUser: jest.fn(),
