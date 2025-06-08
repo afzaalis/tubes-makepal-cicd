@@ -1,20 +1,27 @@
 {
-  "name": "api-rpic",
+  "name": "@afzaalis/api-rpic",
   "version": "1.0.0",
-  "description": "express tut",
+  "description": "Backend API for RPIC project using Express.js",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "test": "jest --coverage"
   },
   "jest": {
-  "testEnvironment": "node",
-  "coverageDirectory": "./coverage",
-  "coverageReporters": ["lcov", "text"]
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage",
+    "coverageReporters": ["lcov", "text"]
   },
-
   "author": "afzaal",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afzaalis/backend-rpic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/afzaalis/backend-rpic/issues"
+  },
+  "homepage": "https://github.com/afzaalis/backend-rpic#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -30,7 +37,6 @@
     "supertest": "^7.1.1"
   },
   "publishConfig": {
-  "registry": "https://npm.pkg.github.com/"
-}
-
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
