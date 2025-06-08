@@ -21,7 +21,6 @@ Repositori ini telah dikonfigurasi dengan pipeline **CI/CD menggunakan GitHub Ac
 
 ## 🔗 Repository & Demonstrasi
 
-- **Repository GitHub**: [URL repository ini]
 - **Video Demonstrasi CI/CD**: [Link video YouTube atau media lainnya]
 
-> Dokumentasi ini akan digunakan sebagai bagian dari penilaian presentasi tugas besar.
+
