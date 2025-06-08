@@ -1,4 +1,4 @@
-name: Frontend CI Test
+name: Backend CI Testing syawal
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./frontend-rpic 
+        working-directory: ./backend-rpic 
 
     steps:
       - name: Checkout repo
