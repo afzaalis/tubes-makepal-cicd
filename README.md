@@ -1,7 +1,7 @@
 # 📦 Tugas Besar MKPL - RPIC Beta CI/CD
 
 Repositori ini merupakan bagian dari Tugas Besar mata kuliah **Manajemen Konfigurasi dan Evolusi Perangkat Lunak (MKPL)**.  
-Proyek yang digunakan adalah website **RPIC versi Beta**, yang terdiri dari dua bagian utama:
+Proyek yang digunakan adalah website **RPIC versi Beta**, yang terdiri dari dua bagian utama (fe & be):
 
 - **Package**: npm
 - **Frontend**: Vite + React.js
