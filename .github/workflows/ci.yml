@@ -1,4 +1,4 @@
-name: Continous Integration Afzaall
+name: Continous Integration Afzaal
 
 on:
   push:
