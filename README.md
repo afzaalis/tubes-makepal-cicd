@@ -5,7 +5,7 @@ Proyek yang digunakan adalah website **RPIC versi Beta**, yang terdiri dari dua 
 
 - **Frontend**: Vite + React.js
 - **Backend**: Node.js + Express
-- host : https://tubes-makepal-cicd-production.up.railway.app/
+- **Host (Railway)** : https://tubes-makepal-cicd-production.up.railway.app/
 
 Repositori ini telah dikonfigurasi dengan pipeline **CI/CD menggunakan GitHub Actions**.
 
