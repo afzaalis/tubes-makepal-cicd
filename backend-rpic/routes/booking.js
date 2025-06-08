@@ -59,18 +59,18 @@ router.get("/user/:userId", async (req, res) => {
 });
 
 //payment
-router.put('/bookings/:bookingId/payment', async (req, res) => {
-  const { bookingId } = req.params;
-  const { paymentStatus, paymentMethod } = req.body;
+// router.put('/bookings/:bookingId/payment', async (req, res) => {
+//   const { bookingId } = req.params;
+//   const { paymentStatus, paymentMethod } = req.body;
 
-  try {
-    const success = await Booking.updatePaymentStatus(bookingId, paymentStatus, paymentMethod);
-    if (!success) return res.status(404).json({ message: 'Booking not found' });
-    res.json({ message: 'Payment updated successfully' });
-  } catch (err) {
-    res.status(500).json({ message: 'Server error' });
-  }
-});
+//   try {
+//     const success = await Booking.updatePaymentStatus(bookingId, paymentStatus, paymentMethod);
+//     if (!success) return res.status(404).json({ message: 'Booking not found' });
+//     res.json({ message: 'Payment updated successfully' });
+//   } catch (err) {
+//     res.status(500).json({ message: 'Server error' });
+//   }
+// });
 
 
 // routes/bookings.js
