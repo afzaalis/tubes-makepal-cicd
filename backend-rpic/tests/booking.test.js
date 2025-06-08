@@ -1,6 +1,6 @@
 const request = require('supertest');
 const express = require('express');
-const bookingRoutes = require('../routes/booking'); // juga ganti file route
+const bookingRoutes = require('../routes/booking'); 
 
 // Mock dependencies
 jest.mock('../model/booking');
