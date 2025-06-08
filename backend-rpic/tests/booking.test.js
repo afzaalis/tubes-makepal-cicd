@@ -13,7 +13,7 @@ const db = require('../db');
 
 const app = express();
 app.use(express.json());
-app.use('/booking', bookingRoutes); // GANTI: bookings → booking
+app.use('/booking', bookingRoutes); 
 
 describe('Booking Routes', () => {
   afterEach(() => {
