@@ -41,7 +41,7 @@ function App() {
           path="/profile" 
           element={<PrivateRoute><Profile /></PrivateRoute>} 
         />
-        <Route 
+{/*         <Route 
           path="/history" 
           element={<PrivateRoute><HistoryPage /></PrivateRoute>} 
         />
@@ -64,7 +64,7 @@ function App() {
           <Route 
           path="/usermanagement" 
           element={<PrivateRoute><UserManagement /></PrivateRoute>} 
-        />
+        /> */}
 
       </Routes>
     </BrowserRouter>
