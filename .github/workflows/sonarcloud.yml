@@ -1,4 +1,4 @@
-name: SonarCloud Inspection RIZKI PUNYA ye
+name: SonarCloud Inspection RIZKI PUNYA
 
 on:
   push:
