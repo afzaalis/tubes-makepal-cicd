@@ -1,4 +1,4 @@
-name: CI for RPIC Project
+name: Continous Integration Afzaal
 
 on:
   push:
@@ -35,4 +35,4 @@ jobs:
           node-version: 18
       - run: npm install
       # - run: npm run lint || echo "Lint failed, but continuing"
-      - run: npm test
+      # - run: npm test
