@@ -1,0 +1,130 @@
+/* General styling for the page */
+.home-admin-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+  
+  .booking-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .booking-header h3 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .delete-btn {
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .delete-btn:hover {
+    background-color: #f44336;
+  }
+  
+  /* Booking details layout */
+  .booking-details {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    color: #555;
+  }
+  
+  .booking-details div {
+    margin-bottom: 10px;
+  }
+  
+  .status {
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .status.pending {
+    background-color: #f9a825;
+    color: #fff;
+  }
+  
+  .status.cancelled {
+    background-color: #d32f2f;
+    color: #fff;
+  }
+  
+  .status.confirmed {
+    background-color: #388e3c;
+    color: #fff;
+  }
+  
+  /* PCs details container */
+  .pcs-details {
+    grid-column: span 2;
+    margin-top: 15px;
+  }
+  
+  .pc-item {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .pc-item strong {
+    color: #2c3e50;
+  }
+  
+  @media (max-width: 768px) {
+    .booking-details {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .complete-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .complete-btn:hover {
+    background-color: #45a049;
+  }
+  

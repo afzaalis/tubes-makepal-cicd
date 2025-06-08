@@ -1,0 +1,57 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+body {
+    background-color: #05051E;
+    color: white;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.page-enter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.intro img {
+    width: 50px; 
+    height: 50px;
+    display: inline-block;
+}
+
+.intro h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    white-space: nowrap;
+}
+
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}

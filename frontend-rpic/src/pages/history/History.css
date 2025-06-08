@@ -1,0 +1,105 @@
+body {
+    background-color: #05051E;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.pc-list {
+  margin-top: 10px;
+}
+
+.pc-table-wrapper {
+  overflow-x: auto;
+}
+
+.pc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.pc-table th, .pc-table td {
+  border: 1px solid #3a3a4d;
+  padding: 8px;
+  text-align: center;
+}
+
+.pc-table th {
+  background-color: #2a2a3b;
+  font-weight: 600;
+}
+
+.pc-table tr:nth-child(even) {
+  background-color: #1a1a2a;
+}
+
+.pc-table tr:hover {
+  background-color: #33334a;
+}
+
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+}
+
+.history-container {
+    padding: 20px;
+    color: white;
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .history-item {
+    background-color: #1f1f2f;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .history-item:hover {
+    background-color: #2a2a3b;
+  }
+  
+  .history-item h4 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .history-item p {
+    margin: 4px 0;
+  }
+  
+  .history-item p span {
+    font-weight: bold;
+  }
+  

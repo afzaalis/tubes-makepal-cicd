@@ -1,0 +1,250 @@
+/* General Styles */
+body {
+    background-color: #05051E;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #05051E;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #00A8FF;
+}
+
+.text-judul {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Profile Container */
+.profile-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #17141D;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.profile-header {
+    padding: 20px;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.profile-container img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.profile-info {
+    padding: 20px;
+}
+
+.profile-details {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #888;
+}
+
+.detail-value {
+    color: white;
+}
+
+/* Buttons */
+.btn-edit,
+.btn-topup {
+    padding: 10px 20px;
+    background-color: #00A8FF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-edit:hover,
+.btn-topup:hover {
+    background-color: #005F7F;
+}
+
+/* Voucher Section */
+.voucher-section {
+    background-color: #1F1B24;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.voucher-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.voucher-name {
+    font-weight: bold;
+    color: #00A8FF;
+}
+
+.voucher-expiry {
+    color: #888;
+}
+
+.btn-view-voucher {
+    padding: 5px 10px;
+    background-color: #333;
+    border: 1px solid #00A8FF;
+    border-radius: 4px;
+    color: #00A8FF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-view-voucher:hover {
+    background-color: #00A8FF;
+    color: white;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal.open {
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #1F1B24;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #888;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ffffff;
+}
+
+/* Edit Profile Modal */
+#editProfileModal label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ddd;
+    text-align: left;
+}
+
+#editProfileModal input[type="text"],
+#editProfileModal input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-save {
+    background-color: #00A8FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+    background-color: #005F7F;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .profile-container {
+        max-width: 90%;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+}

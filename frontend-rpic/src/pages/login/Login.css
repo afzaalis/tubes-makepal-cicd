@@ -1,0 +1,122 @@
+
+
+body {
+    background-color: #05051E;
+    color: white;
+    margin: 0; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.login-outsideContainer {
+    background-color: #15162F;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    width: 100%;
+    max-width: 1200px; 
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    flex-direction: row; 
+}
+
+.login-container {
+    margin: auto;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 450px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-container h1 {
+    margin-bottom: 24px;
+    color: white;
+    font-size: 28px;
+}
+
+.login-container input {
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: black;
+}
+
+.login-container button {
+    background-color: #640EF1;
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 24px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.login-gambar img {
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.line-or {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.line-or::before,
+.line-or::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #CFDFE2;
+}
+
+.line-or::before {
+    margin-right: 10px;
+}
+
+.line-or::after {
+    margin-left: 10px;
+}
+
+.line-or span {
+    padding: 0 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 16px; 
+}
+
+@media (max-width: 768px) {
+    .login-outsideContainer {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 0 20px;
+    }
+
+    .login-container {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .login-gambar img {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 480px) {
+    .login-gambar img {
+        display: none; /* Hide image on small screens */
+    }
+}

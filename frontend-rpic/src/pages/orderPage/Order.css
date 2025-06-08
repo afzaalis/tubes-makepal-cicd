@@ -1,0 +1,350 @@
+/* General Styles */
+body {
+    background-color: #05051E;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.order-item.alpha {
+  background-image: url('/img/imgOrderPage/alpha.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 400px;
+}
+
+.order-item.beta {
+  background-image: url('/img/imgOrderPage/beta.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.order-item.driving {
+  background-image: url('/img/imgOrderPage/driving.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+
+/* dst sesuai tipe */
+
+
+.order-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.order-content {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .order-content {
+        grid-template-columns: 3fr 1fr; 
+    }
+}
+
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #15162F;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 10px;
+  height: auto;
+  min-height: 120px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+.order-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.order-details label {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.order-details input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2C2D59;
+  color: white;
+  width: 150px;
+}
+
+.order-details input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #640EF1;
+}
+
+.order-item h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.order-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.order-price {
+    margin: 5px 0;
+    color: #00FF99;
+    font-weight: bold;
+}
+
+.order-time, .order-duration {
+    background-color: #2C2D59;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px;
+    width: 80px;
+    box-sizing: border-box;
+}
+
+.order-time:focus, .order-duration:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.order-summary {
+    background-color: #15162F;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.order-total {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.order-inputs {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .order-input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .order-input-group label {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+  }
+  
+
+.voucher-btn, .buy-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #640EF1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.voucher-btn:hover, .buy-btn:hover {
+    background-color: #5200cc;
+}
+
+.modal.open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(44, 45, 89, 0.9);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #2C2D59;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px 16px 0 0;
+    padding: 20px;
+    position: relative;
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Payment Methods */
+.payment-method {
+    background-color: #15162F;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method.selected {
+    border: 2px solid #640EF1;
+}
+
+.method-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.method-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.radio-indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #640EF1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-indicator.selected::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #640EF1;
+    border-radius: 50%;
+}
+
+/* Summary Section */
+.payment-summary {
+    margin-top: 24px;
+}
+
+.summary-title {
+    color: #9999A5;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.total-amount {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+/* Action Button */
+.pay-button {
+    background-color: #640EF1;
+    color: white;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+    background-color: #5200cc;
+}
+
+@media (min-width: 768px) {
+    .modal {
+        align-items: center;
+    }
+    
+    .modal-content {
+        border-radius: 16px;
+        margin: 20px;
+    }
+}
+
+/* Transitions */
+button, input {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-time, .order-duration {
+        width: 100%;
+    }
+}

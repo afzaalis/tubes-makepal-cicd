@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #05051E; /* Background color for the body */
+    color: white; /* Text color */
+    display: flex; /* Use Flexbox for body to center contents */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+}
+
+.signup-outsideContainer {
+    background-color: #15162F;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Center child elements vertically */
+    width: 100%;
+    max-width: 1280px; /* Max width for the container */
+    padding: 40px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
+.signup-container {
+    justify-content: center;
+    margin: auto;
+    padding: 40px; /* Padding for medium size */
+    border-radius: 8px;
+    max-width: 450px; /* Maximum width of container */
+    width: 100%;
+}
+
+.signup-container h1 {
+    margin-bottom: 24px;
+    color: white;
+    font-size: 28px; /* Medium size for heading */
+}
+
+.signup-container input {
+    padding: 12px; /* Padding input medium */
+    margin-bottom: 16px; /* Margin medium */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Radius medium */
+    font-size: 16px; /* Font size input */
+    color: black;
+    background-color: white;
+}
+
+.signup-container button {
+    background-color: #640EF1;
+    color: white;
+    padding: 14px; /* Padding medium */
+    border-radius: 8px; /* Radius medium */
+    border: none;
+    cursor: pointer;
+    margin-bottom: 24px; /* Margin medium */
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.signup-gambar img {
+    max-width: 400px; /* Maximum width for image medium */
+    height: auto; /* Allow height to adjust automatically */
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.line-or {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.line-or::before,
+.line-or::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #CFDFE2;
+}
+
+.line-or::before {
+    margin-right: 10px;
+}
+
+.line-or::after {
+    margin-left: 10px;
+}
+
+.line-or span {
+    padding: 0 10px;
+    font-size: 16px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .signup-outsideContainer {
+        flex-direction: column; 
+        padding: 0 20px;
+    }
+
+    .signup-container {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .signup-gambar img {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-gambar img {
+        display: none; /* Hide image on small screens */
+    }
+}

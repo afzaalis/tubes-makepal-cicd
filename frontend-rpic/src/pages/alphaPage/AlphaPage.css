@@ -1,0 +1,142 @@
+body {
+    background-color: #05051E;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-item.unavailable {
+  background-color: #222;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.navbar {
+    background-color: #05051E;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+.navbar-link {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+}
+
+.pc-list {
+    flex: 2;
+    margin-right: 20px;
+    background-color: #15162F;
+    padding: 20px;
+    color: black;
+}
+
+.color-note {
+    background-color: #2C2D59;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.note-item {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.color-box.purple {
+    background-color: purple;
+}
+
+.color-box.black {
+    background-color: black;
+}
+
+.color-box.white {
+    background-color: white;
+}
+
+.info-panel {
+    text-align: center;
+    flex: 1;
+    background-color: #15162F;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan item untuk membungkus ke baris baru */
+    gap: 5px; 
+}
+
+.grid-item {
+    background-color: #ffffff;
+    padding: 10px; 
+    text-align: center;
+    border-radius: 4px;
+    flex: 0 0 calc(16.66% - 5px); /* Mengatur lebar item agar ada 6 item per baris (100% / 6) */
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar total */
+}
+
+
+.confirm-btn {
+    background-color: #640EF1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background-color: #5200cc;
+}
+.info-panel p {
+    color: grey;
+}
+
+.grid-item.selected {
+    background-color: purple;
+    color: white;
+}

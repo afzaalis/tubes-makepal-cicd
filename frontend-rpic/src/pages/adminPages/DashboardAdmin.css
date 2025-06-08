@@ -1,0 +1,119 @@
+.dashboard-admin-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: #3498db; 
+  }
+  
+  .logout-btn {
+    background-color: #e74c3c; 
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c0392b; 
+  }
+  
+  .completed-booking-list {
+    margin-top: 30px;
+  }
+  
+  .completed-booking-item {
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .completed-booking-item:hover {
+    transform: translateY(-5px); /* Efek hover untuk item */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Bayangan lebih kuat saat hover */
+  }
+  
+  .booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .booking-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #34495e; /* Warna teks header */
+  }
+  
+  .booking-details {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .booking-details strong {
+    color: #34495e;
+  }
+  
+  .complete-btn {
+    background-color: #2ecc71; /* Hijau untuk tombol Mark as Completed */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .complete-btn:hover {
+    background-color: #27ae60; 
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
