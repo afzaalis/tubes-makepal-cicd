@@ -50,24 +50,24 @@ jobs:
         run: npm run build
 
       # OPTIONAL: Docker deployment ke local (dapat di-simulasikan)
-      - name: Install Docker
-        uses: docker/setup-buildx-action@v3
+      # - name: Install Docker
+      #   uses: docker/setup-buildx-action@v3
 
-      - name: Build Docker Images
-        run: |
-          docker build -t rpic-backend ./backend-rpic
-          docker build -t rpic-frontend ./frontend-rpic
+      # - name: Build Docker Images
+      #   run: |
+      #     docker build -t rpic-backend ./backend-rpic
+      #     docker build -t rpic-frontend ./frontend-rpic
 
-      - name: Run with Docker Compose
-        run: |
-          echo "version: '3'
-          services:
-            backend:
-              image: rpic-backend
-              ports:
-                - 5000:5000
-            frontend:
-              image: rpic-frontend
-              ports:
-                - 3000:80" > docker-compose.yml
-          docker-compose up -d
+      # - name: Run with Docker Compose
+      #   run: |
+      #     echo "version: '3'
+      #     services:
+      #       backend:
+      #         image: rpic-backend
+      #         ports:
+      #           - 5000:5000
+      #       frontend:
+      #         image: rpic-frontend
+      #         ports:
+      #           - 3000:80" > docker-compose.yml
+      #     docker-compose up -d
