@@ -14,7 +14,7 @@ Repositori ini telah dikonfigurasi dengan pipeline **CI/CD menggunakan GitHub Ac
 
 | No | Nama Anggota          | Komponen CI/CD yang Dikerjakan         |
 |----|------------------------|----------------------------------------|
-| 1  | Afzaal Isnaufal        | Continuous Integration (FE & BE)       |
+| 1  | Afzaal Isnaufal        | Continuous Integration (FE & BE) & host railway      |
 | 2  | Syawal Najat      | Continuous Testing (BE)                    |
 | 3  | Muhammad Rizki       | Continuous Inspection                  |
 | 4  | Athalla Abdul Aziz      | Continuous Deployment/Delivery         |
