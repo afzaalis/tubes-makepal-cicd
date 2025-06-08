@@ -1,6 +1,6 @@
 {
   "name": "@afzaalis/backend-rpic",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Backend API for RPIC project using Express.js",
   "main": "index.js",
   "scripts": {
