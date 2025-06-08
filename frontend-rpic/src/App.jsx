@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LandingPage } from "./pages/landingpage/LandingPage";
+// import { LandingPage } from "./pages/landingpage/LandingPage";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
@@ -20,7 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+{/*         <Route path="/" element={<LandingPage />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
