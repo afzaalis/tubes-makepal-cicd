@@ -22,6 +22,6 @@ Repositori ini telah dikonfigurasi dengan pipeline **CI/CD menggunakan GitHub Ac
 
 ## 🔗 Repository & Demonstrasi
 
-- **Video Demonstrasi CI/CD**: [Link video YouTube atau media lainnya]
+- **Video Demonstrasi CI/CD**: 
 
 
