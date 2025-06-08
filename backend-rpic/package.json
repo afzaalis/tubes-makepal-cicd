@@ -16,12 +16,13 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/afzaalis/backend-rpic.git"
+    "url": "https://github.com/afzaalis/tubes-makepal-cicd.git",
+    "directory": "backend-rpic"
   },
   "bugs": {
-    "url": "https://github.com/afzaalis/backend-rpic/issues"
+    "url": "https://github.com/afzaalis/tubes-makepal-cicd/issues"
   },
-  "homepage": "https://github.com/afzaalis/backend-rpic#readme",
+  "homepage": "https://github.com/afzaalis/tubes-makepal-cicd#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
