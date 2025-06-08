@@ -22,10 +22,10 @@ function App() {
       <Routes>
 {/*         <Route path="/" element={<LandingPage />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
+{/*         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/homeadmin" element={<HomeAdmin />} />
-        <Route path="/dashboardadmin" element={<DashboardAdmin />} />
+        <Route path="/dashboardadmin" element={<DashboardAdmin />} /> */}
         {/* <Route path="/usermanagement" element={<UserManagement />} /> */}
 
         {/* Menggunakan PrivateRoute untuk halaman yang harus login */}
@@ -33,14 +33,14 @@ function App() {
           path="/homeadmin" 
           element={<PrivateRoute><HomeAdmin /></PrivateRoute>} 
         /> */}
-        <Route 
+{/*         <Route 
           path="/homereservasi" 
           element={<PrivateRoute><HomeReservasi /></PrivateRoute>} 
         />
         <Route 
           path="/profile" 
           element={<PrivateRoute><Profile /></PrivateRoute>} 
-        />
+        /> */}
 {/*         <Route 
           path="/history" 
           element={<PrivateRoute><HistoryPage /></PrivateRoute>} 
