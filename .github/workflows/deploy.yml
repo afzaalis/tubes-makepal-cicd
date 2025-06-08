@@ -1,73 +1,42 @@
-name: CI/CD Pipeline Athalah
+name: Continuous Delivery Athallah
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
-      # ===== BACKEND BUILD & TEST =====
+      # Build Frontend
+      - name: Install and Build Frontend
+        working-directory: frontend-rpic
+        run: |
+          npm install
+          npm run build
+
+      # Install Backend dependencies
       - name: Install Backend Dependencies
-        working-directory: ./backend-rpic
+        working-directory: backend-rpic
         run: npm install
 
-      - name: Run Backend Tests
-        working-directory: ./backend-rpic
+      # Simulate delivery: copy built files to delivery folder
+      - name: Archive frontend build
         run: |
-          if [ -f "test" ]; then
-            npm test
-          else
-            echo "No backend test configured"
-          fi
+          mkdir -p delivery-artifacts/frontend
+          cp -r frontend-rpic/dist/* delivery-artifacts/frontend/
 
-      # ===== FRONTEND BUILD & TEST =====
-      - name: Install Frontend Dependencies
-        working-directory: ./frontend-rpic
-        run: npm install
-
-      - name: Run Frontend Tests
-        working-directory: ./frontend-rpic
+      - name: Archive backend source
         run: |
-          if [ -f "test" ]; then
-            npm test
-          else
-            echo "No frontend test configured"
-          fi
-
-      - name: Build Frontend
-        working-directory: ./frontend-rpic
-        run: npm run build
-
-      # OPTIONAL: Docker deployment ke local (dapat di-simulasikan)
-      # - name: Install Docker
-      #   uses: docker/setup-buildx-action@v3
-
-      # - name: Build Docker Images
-      #   run: |
-      #     docker build -t rpic-backend ./backend-rpic
-      #     docker build -t rpic-frontend ./frontend-rpic
-
-      # - name: Run with Docker Compose
-      #   run: |
-      #     echo "version: '3'
-      #     services:
-      #       backend:
-      #         image: rpic-backend
-      #         ports:
-      #           - 5000:5000
-      #       frontend:
-      #         image: rpic-frontend
-      #         ports:
-      #           - 3000:80" > docker-compose.yml
-      #     docker-compose up -d
+          mkdir -p delivery-artifacts/backend
+          cp -r backend-rpic/* delivery-artifacts/backend/
