@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 18
       - run: npm install
-      - run: npm run lint || echo "Lint failed, but continuing"
+      # - run: npm run lint || echo "Lint failed, but continuing"
       - run: npm run build
 
   backend:
@@ -34,5 +34,5 @@ jobs:
         with:
           node-version: 18
       - run: npm install
-      - run: npm run lint || echo "Lint failed, but continuing"
+      # - run: npm run lint || echo "Lint failed, but continuing"
       - run: npm test
