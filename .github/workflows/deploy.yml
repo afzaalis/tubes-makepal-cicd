@@ -1,63 +1,73 @@
-name: CD Deploy Athallah
+name: CI/CD Pipeline Athalah
 
 on:
-  pull_request:
-    branches: [master]
-  release:
-    types: [created]
+  push:
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # === FRONTEND ===
-    - name: Setup Node.js for frontend
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-    - name: Install frontend dependencies
-      working-directory: ./frontend-rpic
-      run: npm install
+      # ===== BACKEND BUILD & TEST =====
+      - name: Install Backend Dependencies
+        working-directory: ./backend-rpic
+        run: npm install
 
-    - name: Build frontend
-      working-directory: ./frontend-rpic
-      run: npm run build
+      - name: Run Backend Tests
+        working-directory: ./backend-rpic
+        run: |
+          if [ -f "test" ]; then
+            npm test
+          else
+            echo "No backend test configured"
+          fi
 
-    # === BACKEND ===
-    - name: Setup Node.js for backend
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
+      # ===== FRONTEND BUILD & TEST =====
+      - name: Install Frontend Dependencies
+        working-directory: ./frontend-rpic
+        run: npm install
 
-    - name: Install backend dependencies
-      working-directory: ./backend-rpic
-      run: npm install
+      - name: Run Frontend Tests
+        working-directory: ./frontend-rpic
+        run: |
+          if [ -f "test" ]; then
+            npm test
+          else
+            echo "No frontend test configured"
+          fi
 
-    # Optional: Jalankan test
-    # - name: Run backend tests
-    #   working-directory: ./backend-rpic
-    #   run: npm test
+      - name: Build Frontend
+        working-directory: ./frontend-rpic
+        run: npm run build
 
-    # === DEPLOYMENT STEP ===
-    # Ubah bagian ini sesuai cara kamu deploy:
-    # - SSH ke VPS
-    # - Push ke layanan hosting
-    # - Deploy ke Vercel, Railway, dll
-    # Contoh deploy ke VPS pakai SSH:
-    - name: Deploy to VPS (optional)
-      if: github.event_name == 'release'
-      uses: appleboy/ssh-action@v1.0.0
-      with:
-        host: ${{ secrets.SERVER_IP }}
-        username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SERVER_SSH_KEY }}
-        script: |
-          cd /home/your-user/app-dir
-          git pull origin master
-          cd frontend-rpic && npm install && npm run build
-          cd ../backend-rpic && npm install && pm2 restart backend-app
+      # OPTIONAL: Docker deployment ke local (dapat di-simulasikan)
+      - name: Install Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Images
+        run: |
+          docker build -t rpic-backend ./backend-rpic
+          docker build -t rpic-frontend ./frontend-rpic
+
+      - name: Run with Docker Compose
+        run: |
+          echo "version: '3'
+          services:
+            backend:
+              image: rpic-backend
+              ports:
+                - 5000:5000
+            frontend:
+              image: rpic-frontend
+              ports:
+                - 3000:80" > docker-compose.yml
+          docker-compose up -d
